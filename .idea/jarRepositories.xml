@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="com.palmple.maven.central" />
+      <option name="name" value="Palmple Maven Central Repository" />
+      <option name="url" value="http://sonatype-nexus.palmple.com:8081/nexus/content/repositories/com.palmple.maven.central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-releases" />
+      <option name="name" value="maven-releases" />
+      <option name="url" value="http://e-nexus.iam0.net/content/repositories/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://e-nexus.iam0.net/content/repositories/central/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-snapshots" />
+      <option name="name" value="maven-snapshots" />
+      <option name="url" value="http://e-nexus.iam0.net/content/repositories/snapshots" />
+    </remote-repository>
+  </component>
+</project>
