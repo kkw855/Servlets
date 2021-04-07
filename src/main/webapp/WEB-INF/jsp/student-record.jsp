@@ -8,7 +8,6 @@
   <%
     if (request.getAttribute("studentRecord") != null) {
       Student student = (Student) request.getAttribute("studentRecord");
-
   %>
 
   <h1>Student Record</h1>
