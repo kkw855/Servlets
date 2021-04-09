@@ -63,11 +63,6 @@
       <version>${org.apache.httpcomponents.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>${gson.version}</version>
-    </dependency>
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>

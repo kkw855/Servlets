@@ -1,6 +1,6 @@
-package com.endsoul.service;
+package com.endsoul.baeldung.servlet.service;
 
-import com.endsoul.model.Student;
+import com.endsoul.baeldung.servlet.model.Student;
 import io.vavr.control.Option;
 
 public class StudentService {

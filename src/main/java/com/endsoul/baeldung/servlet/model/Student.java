@@ -1,4 +1,4 @@
-package com.endsoul.model;
+package com.endsoul.baeldung.servlet.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

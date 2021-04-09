@@ -1,4 +1,4 @@
-package com.endsoul.servlets;
+package com.endsoul.baeldung.servlet.servlets;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;

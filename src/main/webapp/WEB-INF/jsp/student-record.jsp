@@ -1,4 +1,4 @@
-<%@ page import="com.endsoul.model.Student" %>
+<%@ page import="com.endsoul.baeldung.servlet.model.Student" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>

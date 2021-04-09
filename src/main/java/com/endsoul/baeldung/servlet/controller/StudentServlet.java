@@ -1,7 +1,7 @@
-package com.endsoul.controller;
+package com.endsoul.baeldung.servlet.controller;
 
-import com.endsoul.model.Student;
-import com.endsoul.service.StudentService;
+import com.endsoul.baeldung.servlet.model.Student;
+import com.endsoul.baeldung.servlet.service.StudentService;
 import io.vavr.control.Option;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
