@@ -1,4 +1,4 @@
-package com.endsoul.book.web_tech.ch2.servlets;
+package com.endsoul.book.web_tech.ch5.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,27 +7,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/third")
-public class ThirdServlet extends HttpServlet {
+public class SecondServlet extends HttpServlet {
 
-  public ThirdServlet() {
+  public SecondServlet() {
     super();
-    System.out.println("Third 생성자 메서드 호출");
+    System.out.println("Second 생성자 메서드 호출");
   }
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    System.out.println("Third doGet 메서드 호출");
+    System.out.println("Second doGet 메서드 호출");
   }
 
   @Override
   public void destroy() {
-    System.out.println("Third destroy 메서드 호출");
+    System.out.println("Second destroy 메서드 호출");
   }
 
   @Override
   public void init() throws ServletException {
-    System.out.println("Third init 메서드 호출");
+    System.out.println("Second init 메서드 호출");
   }
 }

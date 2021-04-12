@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인 창</title>
+  <script>
+    function fn_validate() {
+      const form = document.frmLogin;
+      const id = form.id.value;
+      const password = form.password.value;
+      if (id.length !== 0 && password.length !== 0) {
+        form.action = "login";
+        form.method = "post";
+        form.submit();
+      } else {
+        alert("아이디와 비밀번호는 필수입니다.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="frmLogin">
+    아이디: <input type="text" name="id" /><br/>
+    비밀번호: <input type="password" name="password" /><br/>
+    <input type="button" onclick="fn_validate()" value="로그인" /> <input type="reset" value="다시 입력">
+  </form>
+</body>
+</html>

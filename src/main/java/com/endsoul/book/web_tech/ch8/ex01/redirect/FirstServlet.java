@@ -1,4 +1,4 @@
-package com.endsoul.book.web_tech.ch2.servlets;
+package com.endsoul.book.web_tech.ch8.ex01.redirect;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,26 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("/first_redirect")
 public class FirstServlet extends HttpServlet {
-
-  public FirstServlet() {
-    super();
-    System.out.println("First 생성자 메서드 호출");
-  }
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
-    System.out.println("First doGet 메서드 호출");
-  }
-
-  @Override
-  public void destroy() {
-    System.out.println("First destroy 메서드 호출");
-  }
-
-  @Override
-  public void init() throws ServletException {
-    System.out.println("First init 메서드 호출");
+    resp.sendRedirect("second_redirect");
   }
 }

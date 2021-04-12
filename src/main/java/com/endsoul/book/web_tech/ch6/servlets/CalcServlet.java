@@ -1,4 +1,4 @@
-package com.endsoul.book.web_tech.ch1.servlets;
+package com.endsoul.book.web_tech.ch6.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,21 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/calc")
-public class RateServlet extends HttpServlet {
-
+public class CalcServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-      throws ServletException, IOException {
-    doHandle(req, resp);
-  }
-
-  @Override
-  protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-      throws ServletException, IOException {
-    doHandle(req, resp);
-  }
-
-  private void doHandle(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
     req.setCharacterEncoding("utf-8");
     resp.setContentType("text/html; charset=utf-8");
@@ -32,8 +20,11 @@ public class RateServlet extends HttpServlet {
     String won = req.getParameter("won");
     String operator = req.getParameter("operator");
 
+    System.out.println("command: " + command);
+
     writer.print("<html>");
     if (command != null && command.equals("calculate")) {
+      // TODO: won 변수가 null 일 때 예외 처리
       String result = calculate(Double.parseDouble(won), operator);
       writer.print("<p style='font-size=10px'>변환결과</p>");
       writer.print("<p style='font-size=10'>" + result + "</p>");
@@ -41,7 +32,7 @@ public class RateServlet extends HttpServlet {
     } else {
       writer.print("<title>환율계산기</title>");
       writer.print("<p>환율 계산기</p>");
-      writer.print("<form name='frmCalc' method='post' action='/calc'>");
+      writer.print("<form name='frmCalc' method='get' action='calc'>");
       writer.print("원화: <input type='text' name='won' size=10 />");
       writer.print("<select name='operator'>");
       writer.print("<option value='dollar'>달러</option>");
