@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class MemberDAO {
+
   private static final String driver = "org.postgresql.Driver";
   private static final String url = "jdbc:postgresql://localhost:5432/java_tech";
   private static final String user = "postgres";
@@ -19,6 +20,7 @@ public class MemberDAO {
   private Statement stmt;
   private Connection con;
 
+  @SuppressWarnings("DuplicatedCode")
   public List<MemberVO> listMembers() {
     List<MemberVO> list = new ArrayList<>();
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>자바스크립트에서 쿠키 사용</title>
+  <script>
+    window.onload = pageLoad;
+    function pageLoad() {
+      const notShowPop = getCookieValue();
+      if (notShowPop !== "true") {
+        window.open()
+      }
+    }
+    function getCookieValue() {
+      let result = "false";
+      if (document.cookie !== "") {
+        const cookie = document.cookie.split(";");
+        for (let i=0; i < cookie.length; i++) {
+          const element = cookie[i].split("=");
+          const value = element[0];
+          if (cookie[i][0] === "notShowPop") {
+            result = cookie[i][1];
+          }
+        }
+      }
+
+      return result;
+    }
+    function deleteCookie() {
+      document.cookie = "notShowPop=false;path=/;expires=-1"
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="button" value="쿠키삭제" onclick="deleteCookie()"/>
+  </form>
+</body>
+</html>

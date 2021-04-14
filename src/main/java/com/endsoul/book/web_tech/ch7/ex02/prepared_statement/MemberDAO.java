@@ -19,12 +19,13 @@ public class MemberDAO {
   private PreparedStatement pstmt;
   private Connection con;
 
+  @SuppressWarnings("DuplicatedCode")
   public List<MemberVO> listMembers() {
     List<MemberVO> list = new ArrayList<>();
 
     try {
       con();
-      String query = "SELECT * FROM t_member";
+      String query = "SELECT * FROM java_tech.public.t_member";
       System.out.println("PreparedStatement: " + query);
       pstmt = con.prepareStatement(query);
       ResultSet rs = pstmt.executeQuery();

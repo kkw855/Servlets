@@ -28,12 +28,13 @@ public class MemberDAO {
     }
   }
 
+  @SuppressWarnings("DuplicatedCode")
   public List<MemberVO> listMembers() {
     List<MemberVO> list = new ArrayList<>();
 
     try {
       Connection con = dataFactory.getConnection();
-      String query = "SELECT * FROM t_member";
+      String query = "SELECT * FROM java_tech.public.t_member";
       System.out.println("PreparedStatement: " + query);
       PreparedStatement pstmt = con.prepareStatement(query);
       ResultSet rs = pstmt.executeQuery();
